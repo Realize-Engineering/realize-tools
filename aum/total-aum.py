@@ -24,9 +24,9 @@ if __name__ == "__main__":
     ).json()
     users = response["data"]
     usersWithLinks = list(filter(lambda user: len(user["institutionLinks"]) > 0, users))
-
-    userLinks = [user["institutionLinks"] for user in usersWithLinks]
-    institutionLinks = list(np.array(userLinks).reshape(-1))
-    institutionLinkIds = [link["id"] for link in institutionLinks]
+    institutionLinks = []
+    for user in usersWithLinks:
+        institutionLinks += user["institutionLinks"]
+    institutionLinkIds = set([link["id"] for link in institutionLinks])
     accountValues = pool.map(getAccountValue, institutionLinkIds)
     print(f"AUM: {sum(accountValues)}")
