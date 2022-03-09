@@ -1,12 +1,7 @@
 import os
 import requests
 from multiprocessing.pool import ThreadPool
-from typing import TypedDict
 import numpy as np
-
-
-class Position(TypedDict):
-    marketValue: str
 
 
 def getAccountValue(institutionLinkId: str) -> float:

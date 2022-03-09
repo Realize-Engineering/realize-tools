@@ -1,4 +1,4 @@
-# Intro
+# Introduction
 
 This script uses realize to aggregate all accountValues across all institution
 links under this app.
@@ -10,7 +10,8 @@ links under this app.
 ## Set Secret Key
 
 Get your secret key from the realize [dashboard](https://www.realizefi.com/dashboard)
-and run the following command:
+
+Run the following command:
 
 ```export REALIZE_SECRET_KEY=<dashboard_secret_key>```
 
