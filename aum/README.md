@@ -10,6 +10,8 @@ links under this app.
 ## Set Secret Key
 
 Get your secret key from the realize [dashboard](https://www.realizefi.com/dashboard)
+and run the following command:
+
 ```export REALIZE_SECRET_KEY=<dashboard_secret_key>```
 
 # Run AUM Script
