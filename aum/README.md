@@ -7,14 +7,14 @@ links under this app.
 
 ```pip3 install -r requirements.txt```
 
-## Set Secret Key
+## Environment Variables
 
-Get your secret key from the realize [dashboard](https://www.realizefi.com/dashboard)
+Get your secret key from the realize [dashboard](https://www.realizefi.com/dashboard).
 
-Run the following command:
+Bind your secret key to env vars via the following command:
 
 ```export REALIZE_SECRET_KEY=<dashboard_secret_key>```
 
-# Run AUM Script
+## Run AUM Script
 
 ```python3 total-aum.py```
