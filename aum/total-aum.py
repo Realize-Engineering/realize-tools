@@ -19,7 +19,7 @@ if __name__ == "__main__":
     pool = ThreadPool()
 
     response = requests.get(
-        "https://www.realizefi.com/api/users",
+        "https://www.realizefi.com/api/users?take=1000",
         headers={"Authorization": f"Bearer {os.environ.get('REALIZE_SECRET_KEY')}"},
     ).json()
     users = response["data"]
