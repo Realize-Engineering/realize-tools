@@ -12,7 +12,11 @@ def getAccountValue(institutionLinkId: str) -> float:
         "Accept": "application/json",
         "Authorization": f"Bearer {os.environ.get('REALIZE_SECRET_KEY')}",
     }
-    return float(requests.request("GET", url, headers=headers).json()["accountValue"])
+    response = requests.request("GET", url, headers=headers)
+    if (response.status_code == 200):
+        return float(response.json()["accountValue"])
+    print(f"Failed to get balance for institutionLinkId={institutionLinkId}. Found status_code={response.status_code}")
+    return 0
 
 
 if __name__ == "__main__":
